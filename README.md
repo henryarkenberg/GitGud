@@ -1,56 +1,46 @@
-# Welcome to your Expo app 👋
+# GitGud — Life OS
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A gamified life-management RPG built in React Native (Expo SDK 57) with a local-first architecture.
+Every prayer, sprint, meal, and conversation feeds your character — stats rise, skills unlock, and an
+AI Oracle turns your days into strategy.
 
-## Get started
+> "Forge your life with intent."
 
-1. Install dependencies
+## Status: Version 1 — The Foundation
 
-   ```bash
-   npm install
-   ```
+- Expo SDK 57 project (works in Expo Go), expo-router navigation with 5 RPG-styled bottom tabs
+  (Today, Sanctum, Forge, Rituals, Aetherium) + stack screens (Settings, Onboarding, Slumber, Vessel, Covenant, Ledger)
+- NativeWind v5 + Tailwind CSS v4 (CSS-first, no babel config) with design tokens for
+  Obsidian/Parchment themes — dark wooden gold-leaf aesthetic (Darkest Dungeon meets Notion)
+- Cinzel (display), Inter (body), JetBrains Mono (data) fonts
+- SQLite (`expo-sqlite`) with `user_profile`, `ledger_entries`, `app_state` tables (WAL mode)
+- Zustand stores + AsyncStorage for theme preference
+- Onboarding flow: hero name, prayer calculation method, madhab, theme, optional OpenAI key
+- Today dashboard: character card with 9 stat bars, level/XP/SP/gold/streak, module empty-states
+- Settings: theme switch, prayer settings, AI key, JSON backup export (share sheet), full data reset
 
-2. Start the app
+See `GitGud_Life_OS_Development_Roadmap.md` for the 10-version build plan (next: **V2 Sanctum — Prayer Tracker**).
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Development
 
 ```bash
-npm run reset-project
+npm install
+npx expo start        # scan QR with Expo Go (SDK 57)
+npm run lint          # expo lint
+npx tsc --noEmit      # typecheck
+npx expo export       # verify bundling
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Layout
 
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+src/
+├── app/            # expo-router routes: (tabs)/ + (stack)/
+├── components/     # tw/ (CSS-enabled wrappers), ui/, shared/
+├── constants/      # theme tokens, AI config
+├── db/             # schema, database init, repositories
+├── hooks/          # useAppTheme
+├── stores/         # useUserStore (SQLite-backed), useThemeStore (AsyncStorage)
+├── types/          # domain types
+└── utils/          # id, xp, exportData
+```
