@@ -42,6 +42,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5f80ccde-d91b-44aa-8082-984509c7111c"
+      }
+    },
+    "owner": "henryarkenberg"
   }
 }
