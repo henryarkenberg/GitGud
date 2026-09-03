@@ -20,7 +20,7 @@ A built Android preview is available as an internal release. Install it on your 
 
 <p align="center">
   <a href="https://expo.dev/accounts/henryarkenberg/projects/gitgud/builds/bdda303b-3868-4fa8-a85e-e1bf169dfe4b">
-    <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-google-playstore.svg" alt="Download" width="24" />
+    <img src="https://api.iconify.design/ion/logo-google-playstore.svg?color=%23ffffff" alt="Download" width="24" />
     &nbsp;<b>Get the build</b>
   </a>
 </p>
@@ -48,13 +48,13 @@ Everything lives on your device in SQLite. There are no accounts and no servers 
 ## Built with
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-react.svg" alt="React Native" width="26" />
-  <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-javascript.svg" alt="TypeScript" width="26" />
-  <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-nodejs.svg" alt="Node" width="26" />
-  <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-npm.svg" alt="npm" width="26" />
-  <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-github.svg" alt="Git" width="26" />
-  <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-android.svg" alt="Android" width="26" />
-  <img src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/svg/logo-apple.svg" alt="iOS" width="26" />
+  <img src="https://api.iconify.design/ion/logo-react.svg?color=%23ffffff" alt="React Native" width="26" />
+  <img src="https://api.iconify.design/ion/logo-javascript.svg?color=%23ffffff" alt="TypeScript" width="26" />
+  <img src="https://api.iconify.design/ion/logo-nodejs.svg?color=%23ffffff" alt="Node" width="26" />
+  <img src="https://api.iconify.design/ion/logo-npm.svg?color=%23ffffff" alt="npm" width="26" />
+  <img src="https://api.iconify.design/ion/logo-github.svg?color=%23ffffff" alt="Git" width="26" />
+  <img src="https://api.iconify.design/ion/logo-android.svg?color=%23ffffff" alt="Android" width="26" />
+  <img src="https://api.iconify.design/ion/logo-apple.svg?color=%23ffffff" alt="iOS" width="26" />
 </p>
 
 <p align="center">
